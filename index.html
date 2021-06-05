@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+    <link rel="shortcut icon" href="img/111.jpg" type="image/-icon">
+    <link rel="stylesheet" href="media/media.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Playfair+Display&display=swap">
+</head>
+
+<body>
+    <section class="wrap-content">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        <div class="inner-content">
+            <div class="main-header">
+                <div class="valute">
+                    <p>RUB: <span class="rub"></span> - Рублей = 1 $</p>
+                    <p>KZT: <span class="kzt"></span> - Тенге = 1 Рубль</p>
+                </div>
+            </div>
+            <div class="inner-converter">
+                <div class="convert">
+                    <div class="inner-content-input">
+                        <div><input type="text" class="kz-input css">Рублей</div>
+                        <div>Будет <span class="kz-in-rub css2"> 0 Тенге</span></div>
+                        <div class="buttons">
+                            <button class="btn-1 add" onclick="dobavit('1')">1</button>
+                            <button class="btn-2 add" onclick="dobavit('2')">2</button>
+                            <button class="btn-3 add" onclick="dobavit('3')">3</button>
+                            <button class="btn-4 add" onclick="dobavit('4')">4</button>
+                            <button class="btn-5 add" onclick="dobavit('5')">5</button>
+                            <button class="btn-6 add" onclick="dobavit('6')">6</button>
+                            <button class="btn-7 add" onclick="dobavit('7')">7</button>
+                            <button class="btn-8 add" onclick="dobavit('8')">8</button>
+                            <button class="btn-9 add" onclick="dobavit('9')">9</button>
+                            <button class="btn-10 add" onclick="dobavit('0')">0</button>
+                            <button class="btn-11 add" onclick="dobavit('.')">.</button>
+                            <button class="btn-c add" onclick="dobavit('C')">C</button>
+                            <button class="btn-12 add" onclick="dobavit('=')">=</button>
+                        </div>
+                    </div>
+                    <div class="inner-content-input">
+                        <div><input type="text" name="input2" class="rub-input css">Тенге </div>
+                        <div>Будет <span class="in-rub">0 Рублей</span></div>
+                        <div class="buttons">
+                            <button class="btn-1 add" onclick="dob('1')">1</button>
+                            <button class="btn-2 add" onclick="dob('2')">2</button>
+                            <button class="btn-3 add" onclick="dob('3')">3</button>
+                            <button class="btn-4 add" onclick="dob('4')">4</button>
+                            <button class="btn-5 add" onclick="dob('5')">5</button>
+                            <button class="btn-6 add" onclick="dob('6')">6</button>
+                            <button class="btn-7 add" onclick="dob('7')">7</button>
+                            <button class="btn-8 add" onclick="dob('8')">8</button>
+                            <button class="btn-9 add" onclick="dob('9')">9</button>
+                            <button class="btn-10 add" onclick="dob('0')">0</button>
+                            <button class="btn-11 add" onclick="dob('.')">.</button>
+                            <button class="btn-c2 add" onclick="dob('C')">C</button>
+                            <button class="btn-13 add" onclick="dob('=')">=</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Калькулятор======================================================================================================================================== -->
+                <div class="inner_calc">
+                    <input type="text" class="tabl" value="">
+                    <div class="btn_inner">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="0">0</button>
+                        <button class="btn" value="+">+</button>
+                        <button class="btn" value="-">-</button>
+                        <button class="btn" value="*">*</button>
+                        <button class="btn" value="/">/</button>
+                        <button class="btn" value=".">.</button>
+                        <button class="btn_consider">=</button>
+                        <button class="clear_value">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+        integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="mainJS/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+@media screen and (max-width: 1230px) {
+.convert {
+    width: 100%;
+}
+.inner-converter {
+    justify-content: center;
+}
+}

@@ -1,0 +1,190 @@
+body
+    margin: 0 auto
+    padding: 0
+    background-color: #1B2838
+
+
+@font-face
+    font-family: 'Gotham Pro'
+    src : url("../fonts/gotam/GothamPro-Bold.ttf")
+
+
+// Блок первый - конвертер ======================================   //  
+@function multiple-box-shadow ($n) 
+    $value: '#{random(2000)}px #{random(2000)}px #FFF'
+    @for $i from 2 through $n
+        $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+
+    @return unquote($value)
+
+$shadows-small:  multiple-box-shadow(700)
+$shadows-medium: multiple-box-shadow(200)
+$shadows-big:    multiple-box-shadow(100)
+.wrap-content
+    margin-top: -6px
+    width: 100%
+    min-height: 100vh
+    // background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
+    overflow: hidden
+    
+.stars
+    width: 1px
+    height: 1px
+    background: transparent
+    box-shadow: $shadows-small
+    animation: animStar 50s linear infinite       
+    &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 1px
+        height: 1px
+        background: transparent
+        box-shadow: $shadows-small
+    
+.stars2
+    width: 2px
+    height: 2px
+    background: transparent
+    box-shadow: $shadows-medium
+    animation			: animStar 100s linear infinite
+    
+    &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 2px
+        height: 2px
+        background: transparent
+        box-shadow: $shadows-medium
+    
+.stars3
+    width: 3px
+    height: 3px
+    background: transparent
+    box-shadow: $shadows-big
+    animation			: animStar 150s linear infinite
+    
+    &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 3px
+        height: 3px
+        background: transparent
+        box-shadow: $shadows-big   
+@keyframes animStar
+    from	
+        transform: translateY(0px)
+    to		
+        transform: translateY(-2000px)
+    
+
+.main-header   
+    display: flex 
+    width: 100%
+    justify-content: center
+    background-color: #46602A
+.inner-converter
+    width: 100%  
+    display: flex
+    flex-wrap: wrap
+.valute
+    width: 85%
+    background-image: url(https://community.akamai.steamstatic.com/public/images/economy/market/header/market_banner.jpg)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    p 
+        font-size: 30px
+        color: #fff
+        font-family: 'Gotham Pro'
+.inner-content
+    width: 100%
+    height: auto
+    align-items: center
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+.convert 
+    width: 75%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    div  
+        font-size: 30px
+        color:#67C1F5
+        font-family: 'Gotham Pro'
+.inner-content-input
+    width: 30%
+    min-width: 400px
+    display: flex
+    flex-direction: column
+    border: 2px solid #222222
+    background-color: #101822
+    overflow: hidden
+    box-shadow: 0 0 13px rgba(0,0,0,0.99)
+    input
+        width: 100%
+.css
+    min-width: 300px
+    height: 50px
+    font-size: 35px
+    outline: none
+
+.buttons
+    width: 100%
+    min-height: 200px
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
+    .btn-13, .btn-12
+        width: 85%
+
+.add
+    font-family: 'Gotham Pro'
+    width: 100px
+    height: 70px
+    font-size: 30px
+    background-color: #2E3237
+    outline: none
+
+    &:hover
+        background-color: #324965
+
+// Калькулятор ===================================================
+.inner_calc 
+    width: 20%
+    max-height: 280px
+    min-width: 300px
+    background-color: #070707
+    display: flex
+    justify-content: center
+    flex-direction: column
+    border: 2px solid 
+    overflow: hidden
+    box-shadow: 0 0 15px rgba(0,0,0,0.99)
+    input 
+        width: 98.3%
+        height: 50px
+        font-size: 40px 
+        background-color: #a4f4f7
+        border: 1px solid 
+.btn_inner
+    display: flex
+    flex-wrap: wrap
+    button
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 25%
+        min-width: 70px
+        min-height: 45px
+        font-size: 25px
+        &:hover
+            background-color: #1ffc02
+        &:active
+            background-color: #fc1f02
+    .clear_value
+        width: 100%
