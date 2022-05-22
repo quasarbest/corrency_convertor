@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Playfair+Display&display=swap">
 </head>
+
 <body>
     <section class="wrap-content">
         <div class="stars"></div>
@@ -28,7 +29,7 @@
                 <div class="convert">
                     <div class="inner-content-input">
                         <div><input type="text" class="kz-input css">Рублей</div>
-                        <div>Будет <span class="kz-in-rub css2"> 0 Тенге</span></div>
+                        <div>Будет <span class="kz-in-rub css2"></span></div>
                         <div class="buttons">
                             <button class="btn-1 add" onclick="dobavit('1')">1</button>
                             <button class="btn-2 add" onclick="dobavit('2')">2</button>
@@ -44,10 +45,11 @@
                             <button class="btn-c add" onclick="dobavit('C')">C</button>
                             <button class="btn-12 add" onclick="dobavit('=')">=</button>
                         </div>
+                        
                     </div>
                     <div class="inner-content-input">
                         <div><input type="text" name="input2" class="rub-input css">Тенге </div>
-                        <div>Будет <span class="in-rub">0 Рублей</span></div>
+                        <div>Будет <span class="in-rub"></span></div>
                         <div class="buttons">
                             <button class="btn-1 add" onclick="dob('1')">1</button>
                             <button class="btn-2 add" onclick="dob('2')">2</button>
@@ -63,6 +65,7 @@
                             <button class="btn-c2 add" onclick="dob('C')">C</button>
                             <button class="btn-13 add" onclick="dob('=')">=</button>
                         </div>
+                        <div><input type="text" name="input" class="steam css">Тенге С вычитом Steam </div>
                     </div>
                 </div>
                 <!-- Калькулятор======================================================================================================================================== -->
@@ -91,6 +94,7 @@
             </div>
         </div>
     </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
         integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
