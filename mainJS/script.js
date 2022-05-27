@@ -15,8 +15,8 @@ let valute = {
    KZT: "",
 };
 axios.get("https://www.cbr-xml-daily.ru/daily_json.js").then((res) => {
-   valute.USD = res.data.Valute.USD.Previous;
-   valute.KZT = res.data.Valute.KZT.Previous;
+   valute.USD = res.data.Valute.USD.Value;
+   valute.KZT = res.data.Valute.KZT.Value;
    USDviuw.textContent = valute.USD.toFixed(0);
    KZTviuw.textContent = (100 / valute.KZT).toFixed(1);
 });
